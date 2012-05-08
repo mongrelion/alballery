@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3', platform: :ruby
-gem 'jdbc-sqlite3', platform: :jruby
 gem 'jquery-rails'
 gem 'devise'
 gem 'inherited_resources'
@@ -18,13 +16,11 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 end
 
-group :development do
-  gem 'therubyracer'
-end
-
 group :development, :test do
   gem 'pry'
   gem 'database_cleaner'
+  gem 'sqlite3', platform: :ruby
+  gem 'jdbc-sqlite3', platform: :jruby
 end
 
 group :test do
@@ -35,4 +31,9 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'launchy'
+end
+
+group :production do
+  gem 'therubyracer'
+  gem 'pg'
 end
