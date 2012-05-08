@@ -27,12 +27,12 @@ html lang="en"
           .container.nav-collapse
             ul.nav
               li= link_to 'Home', root_path
-              li= link_to 'Albums', '#'
+              li= link_to 'Albums', albums_path
             p.navbar-text.pull-right = session_links
 
     .container
       .content
-        == flash_messages
+        .row = flash_messages
         .row
           .span12
             = yield

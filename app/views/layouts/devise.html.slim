@@ -2,6 +2,7 @@ doctype 5
 html
   head
     title Alballery
+    = csrf_meta_tags
     / Le styles
     = stylesheet_link_tag 'application'
 
@@ -19,5 +20,6 @@ html
               li= link_to 'Home', root_path
 
     / Body content
-    .container == flash_messages
+    - flash.keys.each do |k|
+      .container.alert = flash[k]
     .well.span5.center = yield

@@ -1,0 +1,22 @@
+- model_class = @album.class
+h1=t '.title', :default => model_class.model_name.human
+
+p
+  strong= model_class.human_attribute_name(:title) + ':'
+  br
+  = @album.title
+p
+  strong= model_class.human_attribute_name(:year) + ':'
+  br
+  = @album.year
+p
+  strong= model_class.human_attribute_name(:artist) + ':'
+  br
+  = @album.artist
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), albums_path, :class => 'btn'
+  '
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_album_path(@album), :class => 'btn'
+  '
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), album_path(@album), :method => "delete", :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-danger'
