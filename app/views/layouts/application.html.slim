@@ -28,10 +28,7 @@ html lang="en"
             ul.nav
               li= link_to 'Home', root_path
               li= link_to 'Albums', '#'
-            p.navbar-text.pull-right
-              = link_to 'Sign in', '#'
-              '  or
-              = link_to 'Sign up', '#'
+            p.navbar-text.pull-right = session_links
 
     .container
       .content
