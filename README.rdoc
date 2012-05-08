@@ -1,4 +1,5 @@
 == Alballery
+{<img src="https://secure.travis-ci.org/mongrelion/aballery.png" />}[http://travis-ci.org/mongrelion/aballery]
 
 This is the kind of application that lets you manage your music albums.
 You gotta love it!
