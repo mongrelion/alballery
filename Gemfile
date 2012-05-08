@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3'
+gem 'sqlite3', platform: :ruby
+gem 'jdbc-sqlite3', platform: :jruby
 gem 'jquery-rails'
 gem 'devise'
 gem 'inherited_resources'
