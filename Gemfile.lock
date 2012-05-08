@@ -164,6 +164,8 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    shoulda-matchers (1.1.0)
+      activesupport (>= 3.0.0)
     slim (1.2.0)
       temple (~> 0.4.0)
       tilt (~> 1.3.3)
@@ -218,6 +220,7 @@ DEPENDENCIES
   rails (= 3.2.3)
   rspec-rails
   sass-rails (~> 3.2.3)
+  shoulda-matchers
   slim-rails
   sqlite3
   therubyracer

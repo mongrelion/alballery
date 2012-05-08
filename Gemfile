@@ -32,4 +32,5 @@ group :test do
   gem 'faker'
   gem 'cucumber-rails'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
