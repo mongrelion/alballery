@@ -30,7 +30,8 @@ group :test do
   gem 'capybara'
   gem 'fabrication'
   gem 'faker'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '1.3.0'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'launchy'
 end

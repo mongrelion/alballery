@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title Alballery
+    / Le styles
+    = stylesheet_link_tag 'application'
+
+    / Le javascripts
+    = javascript_include_tag 'application'
+
+  body.devise
+    / Top Navigation bar
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          div= link_to 'Alballery', root_path, class: 'brand'
+          .nav-collapse
+            ul.nav
+              li= link_to 'Home', root_path
+
+    / Body content
+    .container == flash_messages
+    .well.span5.center = yield
