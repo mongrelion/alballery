@@ -4,6 +4,12 @@ rvm:
   - 1.9.2
   - 1.9.3
 
+before_install:
+  - gem update --system
+  - gem -v
+
 before_script:
   - cp config/{database.yml.example,database.yml}
-  - RAILS_ENV=test bundle exec rake db:create db:migrate
+  - bundle exec rake db:setup
+
+bundler_args: --without development production
