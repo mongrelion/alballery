@@ -6,6 +6,7 @@ gem 'devise'
 gem 'inherited_resources'
 gem 'carrierwave'
 gem 'slim-rails'
+gem 'jruby-openssl', :platform => :jruby
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,8 +20,12 @@ end
 group :development, :test do
   gem 'pry'
   gem 'database_cleaner'
-  gem 'sqlite3', platform: :ruby
-  gem 'jdbc-sqlite3', platform: :jruby
+  gem 'sqlite3', :platform => :ruby
+  gem 'activerecord-jdbcsqlite3-adapter', :platform => :jruby
+end
+
+group :development do
+  gem 'foreman'
 end
 
 group :test do
@@ -35,5 +40,7 @@ end
 
 group :production do
   gem 'therubyracer'
+  gem 'therubyrhino', :platform => :jruby
   gem 'pg'
+  gem 'unicorn', :platform => :ruby
 end
