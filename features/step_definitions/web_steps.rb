@@ -6,7 +6,7 @@ Given /^I visit the "([^"]*)" page$/ do |page_name|
 end
 
 Given /^I fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in field, with: value
+  fill_in field, :with => value
 end
 
 Given /^I click on "([^"]*)"$/ do |link_or_button|
