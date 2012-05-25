@@ -1,5 +1,6 @@
 Fabricator(:album) do
-  title "MyString"
-  year 1
-  artist "MyString"
+  title 'Back in Black'
+  artist 'AC/DC'
+  year   1980
+  user!
 end

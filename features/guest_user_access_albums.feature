@@ -1,11 +1,13 @@
 Feature: Guest user tries access albums
-  In order to keep users' albums private
+  In order to let the world now what the application looks like
   As a guest user
-  I should be redirected to the sign in page
-  So that I can not see other people's albums.
+  I should be able to see the list of albums
+
+  Background:
+    Given 5 albums
 
   Scenario: Guest user tries to access the albums section
     Given I am not signed in
     And I visit the "home" page
     And I click on "Albums"
-    Then I should see "You need to sign in or sign up before continuing."
+    Then I should see a list of 5 albums

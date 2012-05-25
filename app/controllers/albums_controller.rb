@@ -1,5 +1,5 @@
 class AlbumsController < InheritedResources::Base
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :index
   respond_to :html, :json
 
   protected
