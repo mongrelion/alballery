@@ -22,3 +22,6 @@
 
 # Ignore Foreman environment variables file
 /.env
+
+# Ignore uploads
+/public/uploads

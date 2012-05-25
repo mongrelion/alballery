@@ -4,14 +4,23 @@
     = f.label :title, :class => 'control-label'
     .controls
       = f.text_field :title, :class => 'text_field'
+
   .control-group
     = f.label :year, :class => 'control-label'
     .controls
       = f.number_field :year, :class => 'number_field'
+
   .control-group
     = f.label :artist, :class => 'control-label'
     .controls
       = f.text_field :artist, :class => 'text_field'
+
+  .control-group
+    = f.label :cover, :class => 'control-label'
+    .controls
+      = f.file_field :cover, :class => 'text_field'
+      = f.hidden_field :cover_cache
+
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     '

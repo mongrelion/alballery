@@ -8,8 +8,11 @@ describe Album do
   it { should validate_presence_of :user_id  }
   it { should validate_numericality_of :year }
 
-  %w[ title artist year ].each do |attribute|
+  [:title, :artist, :year].each do |attribute|
     it { should validate_presence_of attribute }
-    it { should validate_presence_of attribute }
+  end
+
+  [:title, :artist, :year, :cover].each do |attribute|
+    it { should allow_mass_assignment_of attribute }
   end
 end

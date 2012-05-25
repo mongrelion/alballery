@@ -22,6 +22,7 @@ Feature: User creates albums
     And I fill in "Title" with "I am"
     And I fill in "Year" with "1979"
     And I fill in "Artist" with "Earth, Wind and Fire"
+    And I attach the file "album-cover.jpg" to the field "Cover"
     And I click on "Create"
     Then I should see "Album was successfully created."
     And I should see "I am"
