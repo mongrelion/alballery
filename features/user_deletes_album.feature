@@ -11,12 +11,7 @@ Feature: User deletes album
     And the following albums created by "john@doe.com"
       | Title    | Year | Artist         |
       | She Wolf | 2009 | Shakira        |
-      | Circus   | 2008 | Britney Spears |
     And I click on "Albums"
-    And I click on "She Wolf"
     And I click on "Destroy"
     Then I should see "Album was successfully destroyed."
     And I should not see "She Wolf"
-    When I click on "Destroy"
-    Then I should see "Album was successfully destroyed."
-    And I should not see "Circus"

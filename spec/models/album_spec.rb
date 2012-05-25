@@ -12,7 +12,16 @@ describe Album do
     it { should validate_presence_of attribute }
   end
 
-  [:title, :artist, :year, :cover].each do |attribute|
+  [:title, :artist, :year, :cover, :cover_cache].each do |attribute|
     it { should allow_mass_assignment_of attribute }
+  end
+
+  # - Instance Methods - #
+  it 'should know when a user is its owner' do
+    chuck = Fabricate(:user)
+    john  = Fabricate(:user)
+    album = Fabricate(:album, :user => john)
+    album.owner?(john).should be_true
+    album.owner?(chuck).should be_false
   end
 end

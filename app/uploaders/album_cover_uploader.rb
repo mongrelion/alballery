@@ -32,6 +32,6 @@ class AlbumCoverUploader < CarrierWave::Uploader::Base
 
   protected
     def secure_token
-      @secure_token ||= SecureRandom.uuid
+      model.cover_secure_token or model.cover_secure_token = SecureRandom.uuid
     end
 end

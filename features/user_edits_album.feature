@@ -8,11 +8,9 @@ Feature: User edits album
     And the following albums created by "chuck@norris.com"
       | Title     | Year | Artist             |
       | T N T     | 1974 | ACDC               |
-      | Aftermath | 1966 | The Rolling Stones |
 
   Scenario: User edits an album
     Given I click on "Albums"
-    And I click on "T N T"
     And I click on "Edit"
     And I fill in "Title" with "T.N.T."
     And I fill in "Year" with "1975"

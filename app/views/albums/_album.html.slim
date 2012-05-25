@@ -1,0 +1,13 @@
+li.span2
+  .thumbnail
+    = image_tag album.cover.url(:thumb)
+    .caption
+      h5 = album.title
+      p
+        i = album.artist
+      p
+        b = album.year
+      - if user_signed_in? and album.owner?(current_user)
+        span = link_to t('.edit', :default => t("helpers.links.edit")), edit_album_path(album), :class => 'btn btn-mini'
+        '
+        span.pull-right = link_to t('.destroy', :default => t("helpers.links.destroy")), album_path(album), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'

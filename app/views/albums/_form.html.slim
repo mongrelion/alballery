@@ -8,7 +8,7 @@
   .control-group
     = f.label :year, :class => 'control-label'
     .controls
-      = f.number_field :year, :class => 'number_field'
+      = f.text_field :year, :class => 'number_field'
 
   .control-group
     = f.label :artist, :class => 'control-label'
@@ -17,6 +17,9 @@
 
   .control-group
     = f.label :cover, :class => 'control-label'
+    .controls= image_tag resource.cover.url(:thumb)
+
+  .control-group
     .controls
       = f.file_field :cover, :class => 'text_field'
       = f.hidden_field :cover_cache
